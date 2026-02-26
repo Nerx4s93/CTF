@@ -21,23 +21,8 @@
               "icon": "lucide-file",
               "title": "Java2"
             }
-          },
-          {
-            "id": "8002e31ed923d035",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Reverse/crackmes.one/Java6.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Java6"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "b0790604ade269ae",
@@ -216,25 +201,24 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "8002e31ed923d035",
+  "active": "7047946228415258",
   "lastOpenFiles": [
-    "Reverse/crackmes.one/Java7.md",
+    "Reverse/crackmes.one/Java4.md",
     "Reverse/crackmes.one/Java6.md",
     "Reverse/crackmes.one/Java5.md",
-    "Reverse/crackmes.one/Java4.md",
-    "Reverse/crackmes.one/Java3.md",
-    "Reverse/crackmes.one/Java2.md",
-    "Reverse/crackmes.one/Java1.md",
-    "Images/Pasted image 19800126202917.png",
-    "Images/Pasted image 20260226200100.png",
-    "Images/Pasted image 19800126203025.png",
-    "Images/Pasted image 20260226192751.png",
-    "Images/Pasted image 20260226192649.png",
-    "Images/Pasted image 20260226192554.png",
     "Images/Pasted image 20260226183824.png",
     "Images/Pasted image 20260226183453.png",
     "Images/Pasted image 20260226182110.png",
     "Images/Pasted image 20260226182053.png",
+    "Images/Pasted image 20260226181542.png",
+    "Images/Pasted image 20260226181339.png",
+    "Images/Pasted image 20260226181248.png",
+    "Reverse/crackmes.one/Java1.md",
+    "Reverse/crackmes.one/Java3.md",
+    "Reverse/crackmes.one/Java2.md",
+    "Images/Pasted image 20260226180929.png",
+    "Images/Pasted image 20260226180851.png",
+    "Images/Pasted image 20260226180756.png",
     "Reverse/Reverse.md",
     "Reverse/crackmes.one",
     "Web/WebCache.md",

@@ -9,17 +9,17 @@
         "dimension": 59.384164222873906,
         "children": [
           {
-            "id": "48304da6c311c393",
+            "id": "f6b5caacf351271e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Labs/WebCache/1. Exploiting path mapping for web cache deception.md",
+                "file": "Reverse/crackmes.one/Java3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Exploiting path mapping for web cache deception"
+              "title": "Java3"
             }
           }
         ]
@@ -201,18 +201,31 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "48304da6c311c393",
+  "active": "1ef130dd8ccf6493",
   "lastOpenFiles": [
-    "WebCache.md",
-    "Labs/WebCache/1. Exploiting path mapping for web cache deception.md",
-    "Images/Pasted image 20260222130246.png",
-    "Images/Pasted image 20260222130230.png",
-    "Images/Pasted image 20260222130201.png",
-    "Images/Pasted image 20260222130131.png",
-    "Images/Pasted image 20260222130111.png",
-    "Labs/WebCache",
-    "Labs",
-    "Images/Pasted image 20260222121634.png",
+    "Images/Pasted image 20260226175150.png",
+    "Images/Pasted image 20260226174851.png",
+    "Images/Pasted image 20260226174645.png",
+    "Images/Pasted image 20260226174631.png",
+    "Reverse/crackmes.one/Java2.md",
+    "Reverse/crackmes.one/Java3.md",
+    "Images/Pasted image 20260226174005.png",
+    "Images/Pasted image 20260226173923.png",
+    "Images/Pasted image 20260226173757.png",
+    "Images/Pasted image 20260226173715.png",
+    "Images/Pasted image 20260226173707.png",
+    "Images/Pasted image 20260226173603.png",
+    "Images/Pasted image 20260226173514.png",
+    "Reverse/crackmes.one/Java1.md",
+    "Reverse/Reverse.md",
+    "Reverse/crackmes.one",
+    "Web/WebCache.md",
+    "Reverse",
+    "Web",
+    "Web/Labs/WebCache/Lab 2. Exploiting path delimiters for web cache deception.md",
+    "Web/Labs/WebCache/Lab 1. Exploiting path mapping for web cache deception.md",
+    "Web/Labs/WebCache",
+    "Web/Labs",
     "Images"
   ]
 }

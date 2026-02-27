@@ -11,10 +11,14 @@
             "id": "43d1b26ff4705f4f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Reverse/duckerz.ru/Забытый пароль.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "Забытый пароль"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Reverse/duckerz.ru/Забытый пароль.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки"
+              "title": "Обратные ссылки для Забытый пароль"
             }
           },
           {
@@ -179,9 +184,13 @@
   },
   "active": "43d1b26ff4705f4f",
   "lastOpenFiles": [
-    "Reverse/duckerz.ru/Забытый пароль.md",
     "Reverse/duckerz.ru/Забытый пароль 2.md",
     "Reverse/duckerz.ru/Защищенный банк.md",
+    "Reverse/duckerz.ru/Забытый пароль.md",
+    "Reverse/duckerz.ru/Матрёшка.md",
+    "Images/Pasted image 20260228031529.png",
+    "Images/Pasted image 20260228030415.png",
+    "Images/Pasted image 20260228030519.png",
     "Reverse/duckerz.ru/Линейная алгебра.md",
     "Reverse/duckerz.ru/Очень защищенный банк.md",
     "Reverse/duckerz.ru/ПлюсМинус.md",
@@ -205,9 +214,6 @@
     "Reverse/crackmes.one/Java1.md",
     "Images/Pasted image 20260228013500.png",
     "Images/Pasted image 20260228013231.png",
-    "Images/Pasted image 20260228004451.png",
-    "Images/Pasted image 20260228010002.png",
-    "Images/Pasted image 20260228012941.png",
     "Reverse/duckerz.ru/Сделать.md",
     "Reverse/duckerz.ru/Reverse",
     "Reverse/duckerz.ru",
@@ -218,7 +224,6 @@
     "Reverse",
     "Web",
     "Web/Labs/WebCache/Lab 2. Exploiting path delimiters for web cache deception.md",
-    "Web/Labs/WebCache/Lab 1. Exploiting path mapping for web cache deception.md",
     "Web/Labs/WebCache",
     "Web/Labs",
     "Images"

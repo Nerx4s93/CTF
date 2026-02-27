@@ -18,4 +18,4 @@ Encoder состоит из двух функций:
 Проверка:
 ![[Pasted image 20260228004451.png]]
 
-Ответ: DUCKERZ{I_LIkE_TCP}
+Ответ: `DUCKERZ{I_LIkE_TCP}`

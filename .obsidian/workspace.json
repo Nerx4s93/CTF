@@ -37,12 +37,14 @@
             "id": "41d4b9d162b57535",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Images/Pasted image 20260228010002.png"
+                "file": "Reverse/duckerz.ru/Простая геометрия.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260228010002"
+              "icon": "lucide-file",
+              "title": "Простая геометрия"
             }
           }
         ],
@@ -119,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Pasted image 20260228010002.png",
+                "file": "Reverse/duckerz.ru/Простая геометрия.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +131,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Pasted image 20260228010002"
+              "title": "Обратные ссылки для Простая геометрия"
             }
           },
           {
@@ -207,11 +209,16 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "1ef130dd8ccf6493",
+  "active": "41d4b9d162b57535",
   "lastOpenFiles": [
+    "Reverse/duckerz.ru/Очень защищенный банк.md",
+    "Reverse/duckerz.ru/Линейная алгебра.md",
+    "Reverse/duckerz.ru/Защищенный банк.md",
+    "Reverse/duckerz.ru/Забытый пароль 2.md",
+    "Reverse/duckerz.ru/Забытый пароль.md",
+    "Images/Pasted image 20260228010002.png",
     "Reverse/duckerz.ru/Простая геометрия.md",
     "Images/Pasted image 20260228013500.png",
-    "Images/Pasted image 20260228010002.png",
     "Images/Pasted image 20260228013231.png",
     "Images/Pasted image 20260228012941.png",
     "Images/Pasted image 20260228012537.png",
@@ -221,14 +228,9 @@
     "Images/Pasted image 20260228011346.png",
     "Images/Pasted image 20260228011306.png",
     "Reverse/duckerz.ru/TCP Like.md",
-    "Reverse/duckerz.ru/Линейная алгебра.md",
     "Reverse/duckerz.ru/Странность.md",
     "Reverse/crackmes.one/Java1.md",
-    "Reverse/duckerz.ru/Забытый пароль 2.md",
-    "Reverse/duckerz.ru/Забытый пароль.md",
     "Reverse/duckerz.ru/Сделать.md",
-    "Reverse/duckerz.ru/Очень защищенный банк.md",
-    "Reverse/duckerz.ru/Защищенный банк.md",
     "Reverse/duckerz.ru/Разминка.md",
     "Reverse/duckerz.ru/ПлюсМинус.md",
     "Reverse/crackmes.one/Java8.md",

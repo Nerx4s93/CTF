@@ -20,8 +20,33 @@
               "icon": "lucide-file",
               "title": "Линейная алгебра"
             }
+          },
+          {
+            "id": "8db502eeb6ef5637",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Images/Pasted image 20260228004451.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260228004451"
+            }
+          },
+          {
+            "id": "41d4b9d162b57535",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Images/Pasted image 20260228010002.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260228010002"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reverse/duckerz.ru/Линейная алгебра.md",
+                "file": "Images/Pasted image 20260228010002.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Линейная алгебра"
+              "title": "Обратные ссылки для Pasted image 20260228010002"
             }
           },
           {
@@ -184,22 +209,24 @@
   },
   "active": "1ef130dd8ccf6493",
   "lastOpenFiles": [
+    "Reverse/duckerz.ru/Простая геометрия.md",
+    "Images/Pasted image 20260228013500.png",
+    "Images/Pasted image 20260228010002.png",
+    "Images/Pasted image 20260228013231.png",
+    "Images/Pasted image 20260228012941.png",
+    "Images/Pasted image 20260228012537.png",
+    "Images/Pasted image 20260228012328.png",
+    "Images/Pasted image 20260228011736.png",
+    "Images/Pasted image 20260228011712.png",
+    "Images/Pasted image 20260228011346.png",
+    "Images/Pasted image 20260228011306.png",
+    "Reverse/duckerz.ru/TCP Like.md",
+    "Reverse/duckerz.ru/Линейная алгебра.md",
     "Reverse/duckerz.ru/Странность.md",
     "Reverse/crackmes.one/Java1.md",
-    "Images/Pasted image 20260227215412.png",
     "Reverse/duckerz.ru/Забытый пароль 2.md",
-    "Images/Pasted image 20260227215402.png",
-    "Images/Pasted image 20260227214952.png",
     "Reverse/duckerz.ru/Забытый пароль.md",
-    "Images/Pasted image 20260227214846.png",
     "Reverse/duckerz.ru/Сделать.md",
-    "Images/Pasted image 20260227214731.png",
-    "Images/Pasted image 20260227214353.png",
-    "Images/Pasted image 20260227214317.png",
-    "Reverse/duckerz.ru/Линейная алгебра.md",
-    "Images/Pasted image 20260227212956.png",
-    "Images/Pasted image 20260227212943.png",
-    "Images/Pasted image 20260227212445.png",
     "Reverse/duckerz.ru/Очень защищенный банк.md",
     "Reverse/duckerz.ru/Защищенный банк.md",
     "Reverse/duckerz.ru/Разминка.md",

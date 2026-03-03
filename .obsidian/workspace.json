@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "CyberNSK - ADventureS_Time"
             }
+          },
+          {
+            "id": "b1ddbfff14bdcbed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Reverse/duckerz.ru/Новелла.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Новелла"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/CyberNSK - ADventureS_Time.md",
+                "file": "Reverse/duckerz.ru/Новелла.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для CyberNSK - ADventureS_Time"
+              "title": "Обратные ссылки для Новелла"
             }
           },
           {
@@ -182,21 +197,22 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "35851607bb538c06",
+  "active": "b1ddbfff14bdcbed",
   "lastOpenFiles": [
+    "Images/{F337B1B1-D259-42FF-9753-057EFDD0FAD0}.png",
+    "Reverse/duckerz.ru/Новелла.md",
+    "Images/{2969B808-462B-4E5A-99C7-4FE2CEB7F1A5}.png",
+    "Images/{68C21C9F-674E-4158-B4A1-1DBEE6B8AC8D}.png",
+    "Images/Pasted image 20260303125739.png",
+    "Images/{50787A8E-03CA-408A-90CC-3EE6BC64833E}.png",
+    "Images/{2BB9D087-93AC-493D-85EB-920B970A5AA6}.png",
+    "Images/{C0C6C870-F079-4DDA-A90B-74BCE3331151}.png",
+    "Images/{42485890-B23B-4AB5-978A-98E235C1F199}.png",
+    "Images/{67F63B63-4DB1-46F6-9267-7E5DDBBC2789}.png",
+    "CTF/CyberNSK - ADventureS_Time.md",
     "CTF/CyberNSK - jacute-rgz.md",
     "CTF/CyberNSK - WHAT IS IT!.md",
-    "CTF/CyberNSK - ADventureS_Time.md",
     "Images/{D503F48F-7ADA-45C9-AED9-E225751E9767}.png",
-    "Images/{B3F7038D-C1EA-4504-8C81-9D3F6D3CEE22}.png",
-    "Images/{F9E2CF99-BCD8-452B-B76C-69170FA69FFC} 1.png",
-    "Images/{F9E2CF99-BCD8-452B-B76C-69170FA69FFC}.png",
-    "Images/{CAC6998C-AB2D-4C35-A946-AF011FA32075}.png",
-    "Images/{EE692B45-5C06-479E-8DEC-4DEEE7ED9F54}.png",
-    "Images/{AE6C2603-6296-4FA6-840C-80DEA59FE736}.png",
-    "Images/{D0A15BD5-E6B0-46A5-95D1-A25C88907A30}.png",
-    "Images/{21C29ECF-BF14-4E53-9035-FF8EA2892C01} 1.png",
-    "Images/{21C29ECF-BF14-4E53-9035-FF8EA2892C01}.png",
     "CTF/CyberNSK - Gather_Me_Up.md",
     "Reverse/duckerz.ru/Босс.md",
     "PWN",
@@ -222,7 +238,6 @@
     "Reverse/crackmes.one/Java5.md",
     "Reverse/crackmes.one/Java4.md",
     "Reverse/crackmes.one/Java3.md",
-    "Reverse/crackmes.one/Java2.md",
     "Reverse/duckerz.ru/Reverse",
     "Reverse/duckerz.ru",
     "Reverse/crackmes.one",

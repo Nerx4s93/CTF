@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3d1f300312e6bfee",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Z. Images/Pasted image 20260307154447.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260307154447"
-            }
-          },
-          {
             "id": "fb49af7288319cb3",
             "type": "leaf",
             "state": {
@@ -33,8 +21,7 @@
               "title": "Угадайка"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,7 +181,7 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "1ef130dd8ccf6493",
+  "active": "fb49af7288319cb3",
   "lastOpenFiles": [
     "Z. Images/Pasted image 20260307232659.png",
     "Z. Images/{40492173-3C31-4DB6-8EF6-547D8BA13549}.png",

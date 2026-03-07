@@ -4,35 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "7e84a51be933e612",
+        "id": "4c3ba205afb3fbc4",
         "type": "tabs",
         "children": [
           {
-            "id": "0f9d80f7d1235600",
+            "id": "3d1f300312e6bfee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Steganography/Стеганография.md",
-                "mode": "source",
-                "source": false
+                "file": "Z. Images/Pasted image 20260307154447.png"
               },
-              "icon": "lucide-file",
-              "title": "Стеганография"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260307154447"
             }
           },
           {
-            "id": "23db00d3bc7d19a8",
+            "id": "fb49af7288319cb3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Steganography/Форматы файлов/Изображения.md",
+                "file": "Reverse/duckerz.ru/Угадайка.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Изображения"
+              "title": "Угадайка"
             }
           }
         ],
@@ -196,54 +194,53 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "23db00d3bc7d19a8",
+  "active": "1ef130dd8ccf6493",
   "lastOpenFiles": [
-    "Pasted image 20260307154447.png",
-    "Steganography/Форматы файлов/Лингвистическая стеганография.md",
-    "Z. Images/{E4F413F2-3986-4144-B397-868DE2054362}.png",
-    "Steganography/Форматы файлов/Видео.md",
+    "Z. Images/Pasted image 20260307232659.png",
+    "Z. Images/{40492173-3C31-4DB6-8EF6-547D8BA13549}.png",
+    "Reverse/duckerz.ru/Угадайка.md",
+    "Z. Images/{818A217B-4A87-4F73-B708-C092F48CDC66}.png",
+    "Z. Images/{8F025CE1-6BC0-47A9-880B-916B226746DA}.png",
+    "Z. Images/Pasted image 20260307232225.png",
+    "Z. Images/{0228E0A0-05B2-464E-B1A6-3B1DF85C4C1C}.png",
+    "Z. Images/Pasted image 20260307231731.png",
+    "Z. Images/{E246D84A-A863-4FC1-9BBB-6FE4952537A9}.png",
+    "Z. Images/Pasted image 20260307231551.png",
+    "Z. Images/{FAB4FA6E-AED3-4B0B-8E3F-6CB3A53B8697}.png",
+    "2026-03-07.md",
     "Steganography/Стеганография.md",
-    "Steganography/Подтемы/Метод на опорном слове.md",
-    "Steganography/Форматы файлов/Аудио.md",
-    "Steganography/Форматы файлов/Изображения.md",
+    "Steganography/Форматы файлов/Лингвистическая стеганография.md",
     "Steganography/Форматы файлов/Офисные документы.md",
-    "Z. Images/{683D7F5D-83D7-407F-9945-EADBD7BDE9A9}.png",
+    "Steganography/Форматы файлов/Изображения.md",
+    "Steganography/Форматы файлов/Аудио.md",
+    "Без названия.base",
+    "Без названия.canvas",
+    "Steganography/Форматы файлов/Видео.md",
+    "Steganography/Подтемы/Метод на опорном слове.md",
     "Steganography/Форматы файлов",
     "1. Участие/2025.09.21_TUSUR.pdf",
-    "1. Участие/2025.09.21_TUSUR.jpg",
     "1. Участие/2025.10.08_ФСП Первенство России.pdf",
-    "1. Участие/2026.02.07_DUCKERZ.png",
     "1. Участие/2026.02.07_DUCKERZ.pdf",
     "1. Участие/2026.02.15_TaipanByte.pdf",
-    "1. Участие/2026.02.15_TaipanByte.png",
-    "1. Участие/2025.10.08_ФСП Первенство России.jpg",
-    "1. Участие/Pasted image 20260307000525.jpg",
-    "Z. Images/{6AA135C2-5BC6-40C5-A935-E5590C8FC969}.png",
     "Steganography/Теория",
     "2. CTF - Writeups/2026.02.28_CyberNSK/CyberNSK - ADventureS_Time.md",
     "2. CTF - Writeups/2026.02.28_CyberNSK",
     "1. Участие/2026.02.22_Caplag.pdf",
     "1. Участие/2025.12.20_Caplag.pdf",
-    "1. Участие/2026.01.10_NEW YEAR CTF.pdf",
     "Стеганография.md",
-    "Z. Images/{D597396B-8ABB-41E2-AD10-7D06666F8D2E}.png",
     "2. CTF - Writeups/2026.02.28_CyberNSK/CyberNSK - WHAT IS IT!.md",
     "2. CTF - Writeups/2026.02.28_CyberNSK/CyberNSK - jacute-rgz.md",
     "2. CTF - Writeups/2026.02.28_CyberNSK/CyberNSK - Gather_Me_Up.md",
     "Reverse/duckerz.ru/TCP Like.md",
     "Reverse/duckerz.ru/Домашний ELF.md",
     "Танчики.md",
-    "{83184050-EFF9-47ED-B057-8A9B8B1F383C}.png",
     "Reverse/duckerz.ru/Новелла.md",
     "Reverse/duckerz.ru/Босс.md",
     "Web/WebCache.md",
-    "Без названия.canvas",
     "Reverse/duckerz.ru/Забытый пароль.md",
     "Reverse/duckerz.ru/Забытый пароль 2.md",
     "Reverse/duckerz.ru/Защищенный банк.md",
     "Reverse/duckerz.ru/Матрёшка.md",
-    "Reverse/duckerz.ru/Линейная алгебра.md",
-    "Reverse/duckerz.ru/Очень защищенный банк.md",
-    "Reverse/duckerz.ru/ПлюсМинус.md"
+    "Reverse/duckerz.ru/Линейная алгебра.md"
   ]
 }

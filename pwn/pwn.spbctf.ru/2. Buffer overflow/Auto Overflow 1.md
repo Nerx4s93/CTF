@@ -5,14 +5,14 @@
 **[mc7_censored](https://pwn.spbctf.ru/files/overflow/mc7_censored)**
 **[mc7_censored_notimeout](https://pwn.spbctf.ru/files/overflow/mc7_censored_notimeout)** — для тренировки локально без таймаута
 
-![Pasted image 20260310153110](../../../z.%20Images/Pasted%20image%2020260310153110.png)
-![{8D6D2898-CAA7-4150-A106-74707369EB5F}](../../../z.%20Images/{8D6D2898-CAA7-4150-A106-74707369EB5F}.png)
+![Pasted image 20260310153110](../../../y.%20Images/Pasted%20image%2020260310153110.png)
+![{8D6D2898-CAA7-4150-A106-74707369EB5F}](../../../y.%20Images/{8D6D2898-CAA7-4150-A106-74707369EB5F}.png)
 Программа печатает рандомное число, которое при помощи pwntools надо считать, а затем необходимо переполнить буфер userInput, чтобы переписать string1 на рандомное число из verify.
 
 Солвер:
-![Pasted image 20260310154552](../../../z.%20Images/Pasted%20image%2020260310154552.png)
+![Pasted image 20260310154552](../../../y.%20Images/Pasted%20image%2020260310154552.png)
 
 Запуск:
-![{8A365684-9972-4687-B9DC-02B025A659E2}](../../../z.%20Images/{8A365684-9972-4687-B9DC-02B025A659E2}.png)
+![{8A365684-9972-4687-B9DC-02B025A659E2}](../../../y.%20Images/{8A365684-9972-4687-B9DC-02B025A659E2}.png)
 
 Ответ: `spbctf{how_d1d_y0u_l1ke_the_g37s_func}`

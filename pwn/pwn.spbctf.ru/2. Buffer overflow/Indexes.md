@@ -3,13 +3,13 @@
 nc 109.233.56.90 11572
 
 Чтобы получить флаг secretPtr должен быть равен s2.
-![{97CA33BA-CBB0-485B-B5C0-11D366A8BBF5}](../../../z.%20Images/{97CA33BA-CBB0-485B-B5C0-11D366A8BBF5}.png)
+![{97CA33BA-CBB0-485B-B5C0-11D366A8BBF5}](../../../y.%20Images/{97CA33BA-CBB0-485B-B5C0-11D366A8BBF5}.png)
 
 Из массива global можно добраться до массива s2.
-![Pasted image 20260309123053](../../../z.%20Images/Pasted%20image%2020260309123053.png)
+![Pasted image 20260309123053](../../../y.%20Images/Pasted%20image%2020260309123053.png)
 Индекс = 16640 / 8 = 2080.
 
 Проверка:
-![{89E2D32D-00BC-42D1-948F-DA5DF68F165F}](../../../z.%20Images/{89E2D32D-00BC-42D1-948F-DA5DF68F165F}.png)
+![{89E2D32D-00BC-42D1-948F-DA5DF68F165F}](../../../y.%20Images/{89E2D32D-00BC-42D1-948F-DA5DF68F165F}.png)
 
 Ответ: `spbctf{well_I_should_not_forget_to_check_indexes}`

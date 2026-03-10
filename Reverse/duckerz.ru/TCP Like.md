@@ -6,16 +6,16 @@
 1. Генерирует случайную строку;
 2. Шифрует эту случайную строку;
 3. Пользователь должен напечатать зашифрованную строку, когда ему дают изначальную.
-![Pasted image 20260228004057](../../z.%20Images/Pasted%20image%2020260228004057.png)
+![Pasted image 20260228004057](../../y.%20Images/Pasted%20image%2020260228004057.png)
 
 Encoder состоит из двух функций:
-![Pasted image 20260228004211](../../z.%20Images/Pasted%20image%2020260228004211.png)
-![Pasted image 20260228004219](../../z.%20Images/Pasted%20image%2020260228004219.png)
+![Pasted image 20260228004211](../../y.%20Images/Pasted%20image%2020260228004211.png)
+![Pasted image 20260228004219](../../y.%20Images/Pasted%20image%2020260228004219.png)
 
 Чтобы получить зашифрованную строку из исходной данный код можно просто скопировать и перекомпилить.
-![Pasted image 20260228004305](../../z.%20Images/Pasted%20image%2020260228004305.png)
+![Pasted image 20260228004305](../../y.%20Images/Pasted%20image%2020260228004305.png)
 
 Проверка:
-![Pasted image 20260228004451](../../z.%20Images/Pasted%20image%2020260228004451.png)
+![Pasted image 20260228004451](../../y.%20Images/Pasted%20image%2020260228004451.png)
 
 Ответ: `DUCKERZ{I_LIkE_TCP}`

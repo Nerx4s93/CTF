@@ -1,17 +1,17 @@
 [crackmes.de's genme by cry971c](https://crackmes.one/crackme/5ab77f6533c5d40ad448cb82)
 
 Программа принимает на вход name и serial, а затем их обрабатывает.
-![Pasted image 20260226181248](../../z.%20Images/Pasted%20image%2020260226181248.png)
+![Pasted image 20260226181248](../../y.%20Images/Pasted%20image%2020260226181248.png)
 
 В точке входа создаётся окно. Инициализация UI происходит в классе "c".
-![Pasted image 20260226181339](../../z.%20Images/Pasted%20image%2020260226181339.png)
+![Pasted image 20260226181339](../../y.%20Images/Pasted%20image%2020260226181339.png)
 
 Обработка событий происходит в классе "a".
-![Pasted image 20260226181542](../../z.%20Images/Pasted%20image%2020260226181542.png)
+![Pasted image 20260226181542](../../y.%20Images/Pasted%20image%2020260226181542.png)
 
 Разбор алгоритма проверки ключа (находится в классе "a").
-![Pasted image 20260226182053](../../z.%20Images/Pasted%20image%2020260226182053.png)
-![Pasted image 20260226182110](../../z.%20Images/Pasted%20image%2020260226182110.png)
+![Pasted image 20260226182053](../../y.%20Images/Pasted%20image%2020260226182053.png)
+![Pasted image 20260226182110](../../y.%20Images/Pasted%20image%2020260226182110.png)
 1. В переменную serial записывается введённый ключ;
 2. В bVar.key записывается длина строки nameText умноженная на 1337;
 3. bVar.result используется как буфер;
@@ -24,9 +24,9 @@
 3. Символы по индексам 6, 5, 8 5 складываются в строку "ggif"
 
 Проверка:
-![Pasted image 20260226183453](../../z.%20Images/Pasted%20image%2020260226183453.png)
+![Pasted image 20260226183453](../../y.%20Images/Pasted%20image%2020260226183453.png)
 
 keygen для любого имени:
-![Pasted image 20260226183824](../../z.%20Images/Pasted%20image%2020260226183824.png)
+![Pasted image 20260226183824](../../y.%20Images/Pasted%20image%2020260226183824.png)
 
 Задача решена.

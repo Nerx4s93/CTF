@@ -1,21 +1,21 @@
 [zsombii's Easy crackme](https://crackmes.one/crackme/693d89b50992a052ab2222d7)
 
 Первым делом запускаю программу. Она просит какую-то строку для проверки.
-![Pasted image 20260226173514](../../Z.%20Images/Pasted%20image%2020260226173514.png)
+![Pasted image 20260226173514](../../z.%20Images/Pasted%20image%2020260226173514.png)
 
 Программа состоит из одного класса, в котором отсутствует обфускация.
-![Pasted image 20260226173603](../../Z.%20Images/Pasted%20image%2020260226173603.png)
+![Pasted image 20260226173603](../../z.%20Images/Pasted%20image%2020260226173603.png)
 
 Работа программы:
 1. Пользователь должен ввести строку длиной 10.
-	![Pasted image 20260226173715](../../Z.%20Images/Pasted%20image%2020260226173715.png)
+	![Pasted image 20260226173715](../../z.%20Images/Pasted%20image%2020260226173715.png)
 2. Проверка ключа через метод checkValidity.
-	![Pasted image 20260226173757](../../Z.%20Images/Pasted%20image%2020260226173757.png)
+	![Pasted image 20260226173757](../../z.%20Images/Pasted%20image%2020260226173757.png)
 3. В checkValidity необходимо получить 4 "очка/поинта", чтобы пароль был верным. 1 поинт даётся за каждый символ, у которого результат операции key & 3 == 0
-	![Pasted image 20260226173923](../../Z.%20Images/Pasted%20image%2020260226173923.png)
+	![Pasted image 20260226173923](../../z.%20Images/Pasted%20image%2020260226173923.png)
 	Под это условие подходит символ D.
 
 Проверка:
-![Pasted image 20260226174005](../../Z.%20Images/Pasted%20image%2020260226174005.png)
+![Pasted image 20260226174005](../../z.%20Images/Pasted%20image%2020260226174005.png)
 
 Задача решена.

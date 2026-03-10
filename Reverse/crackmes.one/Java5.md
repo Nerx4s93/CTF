@@ -1,15 +1,15 @@
 [DanXvo's Easy Crack me](https://crackmes.one/crackme/65d7ab976d3d2b1fef4be38d)
 
 Запускаю программу и смотрю, как она работает.
-![Pasted image 20260226180623](../../Z.%20Images/Pasted%20image%2020260226180623.png)
+![Pasted image 20260226180623](../../z.%20Images/Pasted%20image%2020260226180623.png)
 Программа принимает на вход строку и обрабатывает её.
 
 В точке входа программа создаёт экземпляр класса MainLoader и вызывает там метод main.
-![Pasted image 20260226180756](../../Z.%20Images/Pasted%20image%2020260226180756.png)
+![Pasted image 20260226180756](../../z.%20Images/Pasted%20image%2020260226180756.png)
 
 Внутри MainLoader происходит простая проверка. Введённая строка сравнивается 2143.
-![Pasted image 20260226180851](../../Z.%20Images/Pasted%20image%2020260226180851.png)
+![Pasted image 20260226180851](../../z.%20Images/Pasted%20image%2020260226180851.png)
 
-![Pasted image 20260226180929](../../Z.%20Images/Pasted%20image%2020260226180929.png)
+![Pasted image 20260226180929](../../z.%20Images/Pasted%20image%2020260226180929.png)
 
 Задача решена.

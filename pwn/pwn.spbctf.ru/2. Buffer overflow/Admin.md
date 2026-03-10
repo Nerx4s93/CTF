@@ -1,3 +1,4 @@
+[Tasks :: pwn.spbctf.ru](https://pwn.spbctf.ru/tasks/pwn1_admin)
 Описание: Надо сделать переполнение переменной username в bss секции и стать админом.  
 [task](https://pwn.spbctf.ru/files/overflow/admin/task
 nc 109.233.56.90 11575

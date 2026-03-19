@@ -1,0 +1,16 @@
+[Tasks :: pwn.spbctf.ru](https://pwn.spbctf.ru/tasks/pwn1_mc6)
+Описание: Переполните, чтобы получить флаг.
+nc 109.233.56.90 11586
+Прикреплён: mc6_censored (elf file).
+
+![{256BC597-85CD-4CF7-B574-F971EE74A37F}](../../../../z.%20Images/{256BC597-85CD-4CF7-B574-F971EE74A37F}.png)
+![Pasted image 20260309120711](../../../../z.%20Images/Pasted%20image%2020260309120711.png)
+Необходимо заполнить буфер + 8 байт отступа, затем ввести упакованную строку 13371337.
+
+Код:
+![Pasted image 20260309121126](../../../../z.%20Images/Pasted%20image%2020260309121126.png)
+
+Запуск:
+![{76122BA2-97D0-4EBF-8B43-9FE0F50D1CF7}](../../../../z.%20Images/{76122BA2-97D0-4EBF-8B43-9FE0F50D1CF7}.png)
+
+Ответ: `spbctf{s4v3d_the_w0rld_fr0M_HELL}`

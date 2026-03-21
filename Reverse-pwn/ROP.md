@@ -25,7 +25,7 @@ ret
 Частный случай атаки ROP. 
 
 **[one_gadget](https://github.com/david942j/one_gadget)** - утилита для поиска гаджетов получения шела. На вход принимает библиотеку, и выдаёт найденные гаджеты, которые дадут доступ к шел при определённых условиях (например, `rax` = 0 & `rdi` = 0).
-[libc database search](https://libc.blukat.me/) - база данных libc, можно найти необходимую версию libc по окончанию адресов функций.
+[libc database search](https://libc.blukat.me/), [libc-database](https://libc.rip/) - базы данных libc, можно найти необходимую версию libc по окончанию адресов функций.
 # ASLR
 Address Space Layout Randomization - рандомизация памяти, механизм защиты.
 

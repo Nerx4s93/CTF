@@ -34,7 +34,6 @@ add rsp, 32
 
 # syscall'ы
 [Chromium OS Docs - Linux System Call Table](https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md)
-filip.io/linux-syscall-table
 
 ``` nasm
 ; x64

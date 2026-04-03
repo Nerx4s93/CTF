@@ -5,9 +5,7 @@ ROP - Return Oriented Programming. Программирование происх
 Поиск гаджетов:
 ``` 
 ROPGadget --binary <file>
-```
-```
-ropper --file nocolor <file>
+ropper --nocolor --file <file>
 ```
 
 # Пример

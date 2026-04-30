@@ -16,7 +16,7 @@ Just call win_fcn and make it print flag for you. And there is no shellcode now!
 Шел-код:
 ![{8CEA52D8-4708-4790-9BAA-AED2D5881026}](../../../../z.%20Images/{8CEA52D8-4708-4790-9BAA-AED2D5881026}.png)
 
-Солвер:
+Эксплоит:
 ![{A1DD3CD3-9528-4CEA-A39C-E21CC7F523BE}](../../../../z.%20Images/{A1DD3CD3-9528-4CEA-A39C-E21CC7F523BE}.png)
 Гаджета `pop r9` нигде не было, но был `xor r9, r9`, т.к. в r9 должен быть 0, то этот гаджет пойдёт.
 

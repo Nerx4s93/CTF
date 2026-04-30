@@ -75,7 +75,7 @@ __int64 __fastcall Student::Shell(Student *this)
 ![{80EA667B-843A-4722-AEEC-BC661FD7F663}](../../../../z.%20Images/{80EA667B-843A-4722-AEEC-BC661FD7F663}.png)
 Под qira видно, что необходимо 0x28 байт паддинга + изменение адреса таблицы с 0x3da8 на 0x3db0.
 
-Солвер:
+Эксплоит:
 ``` python
 main_offset = 0x11C9
 shell_offset = 0x3DB0

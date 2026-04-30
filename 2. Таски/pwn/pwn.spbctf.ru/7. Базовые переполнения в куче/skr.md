@@ -189,7 +189,7 @@ static void bufinit() {
 Вот так это выглядит в памяти:
 ![{6544FBD8-78D4-4EBD-96E1-56816C5AD0F3}](../../../../z.%20Images/{6544FBD8-78D4-4EBD-96E1-56816C5AD0F3}.png)
 
-Солвер:
+Эксплоит:
 ``` python
 io = start()
 

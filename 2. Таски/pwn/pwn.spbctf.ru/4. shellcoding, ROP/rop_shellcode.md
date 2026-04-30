@@ -10,7 +10,7 @@ Run the shellcode and call /bin/getflag
 Шел-код:
 ![Pasted image 20260404134400](../../../../z.%20Images/Pasted%20image%2020260404134400.png)
 
-Солвер:
+Эксплоит:
 ![{56A16530-060F-4D96-8073-7C4A3DFBD182}](../../../../z.%20Images/{56A16530-060F-4D96-8073-7C4A3DFBD182}.png)
 
 Запуск:

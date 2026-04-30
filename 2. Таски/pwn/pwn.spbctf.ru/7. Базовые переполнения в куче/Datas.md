@@ -120,7 +120,7 @@ void __cdecl String::Modify(String *const this)
 ![{5A5EEEE3-55A2-4EFB-ACA0-7BEA0999402B}](../../../../z.%20Images/{5A5EEEE3-55A2-4EFB-ACA0-7BEA0999402B}.png)
 Байт 70 надо поменять на 30. Смещение = 24.
 
-Солвер:
+Эксплоит:
 ``` python
 io = start()
 

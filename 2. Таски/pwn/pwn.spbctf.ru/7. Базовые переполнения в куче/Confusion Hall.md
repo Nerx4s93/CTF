@@ -13,7 +13,7 @@ Numbers and Strs. Completely interchangeable.
 ![{01F61B7D-5F5F-4318-AAE4-A4E4BD4C1296}](../../../../z.%20Images/{01F61B7D-5F5F-4318-AAE4-A4E4BD4C1296}.png)
 Мой malloc займёт input + 0x10 (заголовок). Следующий начнётся после моего + 0x10 (заголовок). Поэтому надо просто отнимать дополнительно 0x30.
 
-Солвер:
+Эксплоит:
 ``` python
 io = start()
 

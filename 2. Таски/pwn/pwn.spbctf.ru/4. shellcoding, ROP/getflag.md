@@ -13,7 +13,7 @@ Run the shellcode and call /bin/getflag
 Компилирую шел-код при помощи [pwnasm](https://github.com/Nerx4s93/pwnasm).
 ![{69B4EFEF-FD5C-490C-9AAF-8765DF7A027A}](../../../../z.%20Images/{69B4EFEF-FD5C-490C-9AAF-8765DF7A027A}.png)
 
-Солвер:
+Эксплоит:
 ![{0DD3F7D5-F797-4164-B5F9-282DFF80755F}](../../../../z.%20Images/{0DD3F7D5-F797-4164-B5F9-282DFF80755F}.png)
 
 Запуск:

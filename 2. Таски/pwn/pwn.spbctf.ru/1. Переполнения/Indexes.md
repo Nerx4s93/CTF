@@ -3,10 +3,45 @@
 nc 109.233.56.90 11572
 
 Чтобы получить флаг secretPtr должен быть равен s2.
-![{97CA33BA-CBB0-485B-B5C0-11D366A8BBF5}](../../../../z.%20Images/{97CA33BA-CBB0-485B-B5C0-11D366A8BBF5}.png)
+``` C
+if ( userInput <= 32 )
+{
+  for ( i = 0; i < (int)userInput; ++i )
+  {
+    puts("enter your secret: ");
+    *(_QWORD *)&global[8 * i] = malloc(32u);
+    fgets(*(char **)&global[8 * i], 32, stdin);
+  }
+
+  puts("Enter secret idx to check: ");
+  __isoc99_scanf("%d", &secretIndex);
+  getchar();
+  
+  secretPtr = *(void **)&global[8 * secretIndex];
+  
+  if ( secretPtr && !memcmp(secretPtr, s2, 0x32u) )
+  {
+    puts("YOU WIN!");
+    stream = fopen("flag.txt", "r");
+    memset(s, 0, 0x100u);
+    fread(s, 0x100u, 1, stream);
+    fclose(stream);
+    puts(s);
+    return 1;
+  }
+  else
+  {
+    puts("Nope...");
+    return 0;
+  }
+}
+```
 
 Из массива global можно добраться до массива s2.
-![Pasted image 20260309123053](../../../../z.%20Images/Pasted%20image%2020260309123053.png)
+``` bss
+.bss:00005555555602040 global      db 16640 dup(?)  ; Массив указателей
+.bss:00005555555606140 s2          dq ?             ; Секретный указатель (цель)
+```
 Индекс = 16640 / 8 = 2080.
 
 Проверка:

@@ -5,7 +5,16 @@
 nc 109.233.56.90 11577
 
 Программа просит ввести имя, а затем вызывает команду.
-![{08758F06-8745-4B0E-BAB1-E41FD31C3EBE}](../../../../z.%20Images/{08758F06-8745-4B0E-BAB1-E41FD31C3EBE}.png)![{E67F0811-26D9-470F-9C7F-540477EC341B}](../../../../z.%20Images/{E67F0811-26D9-470F-9C7F-540477EC341B}.png)
+``` C
+printf("Enter your name: ");
+read(0, buffer, 0x400u);
+printf("Successful login at ");
+system(command);
+
+// stack:
+// -0000000000000200         char buffer[256];
+// -0000000000000100         char command[8];
+```
 Необходимо переполнить буфер и написать в конце `/bin/sh`, чтобы открыть шел.
 
 ![Pasted image 20260309150855](../../../../z.%20Images/Pasted%20image%2020260309150855.png)

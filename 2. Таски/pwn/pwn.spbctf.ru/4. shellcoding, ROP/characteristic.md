@@ -11,7 +11,7 @@ Are you able to bypass the check? Run the shellcode
 Шел-код:
 ![{D5348FB9-B186-4561-B818-948AC090C7BC}](../../../../z.%20Images/{D5348FB9-B186-4561-B818-948AC090C7BC}.png)
 
-Солвер:
+Эксплоит:
 ![{CD80EB22-AFE6-46DC-8DC4-A2D3375ED09C}](../../../../z.%20Images/{CD80EB22-AFE6-46DC-8DC4-A2D3375ED09C}.png)
 
 Запуск:

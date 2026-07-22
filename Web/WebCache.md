@@ -110,4 +110,4 @@
 - `#` — браузер обрезает всё, что после него (не доходит до сервера)
 **Обход:** Если кэш или сервер декодируют символы, можно отправлять их в закодированном виде (например, `%7B` вместо `{`).
 
-### [Lab 2: Path delimiters](Lab%202.%20Exploiting%20path%20delimiters%20for%20web%20cache%20deception)
+### [Lab 2: Path delimiters](Labs/WebCache/Lab%202.%20Exploiting%20path%20delimiters%20for%20web%20cache%20deception.md)

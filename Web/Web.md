@@ -1,2 +1,2 @@
-[SQLi](SQL%20injection/SQLi.md)
-[WebCache](WebCache/WebCache.md)
+[z. SQLi](SQL%20injection/z.%20SQLi.md)
+[z. WebCache](WebCache/z.%20WebCache.md)

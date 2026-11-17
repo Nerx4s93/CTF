@@ -141,3 +141,5 @@ io.interactive()
 
 Запуск:
 ![](../../../../z.%20Images/{97995A5F-9F1C-4A77-B3F2-8C62B8C37958}.png)
+
+Ответ: `spbctf{mic_check_now_with_sweet_taste_of_tcache_poison}`
